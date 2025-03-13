@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Corps de la page */
+body {
+    background: #3e1f11;  /* Fond marron foncé pour rappeler Minecraft */
+    font-family: 'MedievalSharp', cursive;
+    color: #f4e4c1;
+    text-align: center;
+    position: relative;
+}
+
+/* En-tête */
+header {
+    background: #2b1d0f;
+    padding: 20px;
+    border-bottom: 5px solid #b8860b;
+    font-size: 24px;
+}
+
+/* Titre avec effet de lévitation et de flamme */
+#titreNidavellir {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 60px;
+    color: #f4e4c1;
+    text-shadow: 3px 3px 6px #000;
+    animation: levitation 2s ease-in-out infinite, flameEffect 1s ease-in-out infinite;
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background: transparent;
+}
+
+/* Animation de lévitation */
+@keyframes levitation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Effet de flamme derrière le titre */
+@keyframes flameEffect {
+    0% {
+        text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #f39c12, 0 0 50px #f39c12;
+    }
+    50% {
+        text-shadow: 0 0 15px #f39c12, 0 0 25px #f39c12, 0 0 35px #f39c12, 0 0 45px #f39c12, 0 0 55px #f39c12;
+    }
+    100% {
+        text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #f39c12, 0 0 50px #f39c12;
+    }
+}
+
+/* Motif subtil en arrière-plan : Minerais ou blocs */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(62, 31, 17, 0.8) 20%, transparent 30%), 
+                linear-gradient(45deg, rgba(0, 0, 0, 0.3) 25%, transparent 25%) 0px 0px, 
+                linear-gradient(45deg, rgba(0, 0, 0, 0.3) 25%, transparent 25%) 15px 15px;
+    background-size: 50px 50px, 40px 40px, 40px 40px;
+    animation: movingBackground 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Effet de mouvement léger pour l'arrière-plan */
+@keyframes movingBackground {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+    50% {
+        background-position: 20px 20px, 20px 20px, 20px 20px;
+    }
+    100% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+}
+
+/* Sections */
+section {
+    background: #252525;
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    border: 5px solid black;
+    box-shadow: inset 0 0 20px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #b8860b;
+}
+
+/* Pied de page */
+footer {
+    background: #2b1d0f;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Titres */
+h1, h2 {
+    font-family: 'MedievalSharp', cursive;
+    text-shadow: 3px 3px 6px #000;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* Petit texte plus gras */
+p {
+    font-weight: 600; /* Augmente l'épaisseur des lettres */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav a {
+    color: #f4e4c1;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
