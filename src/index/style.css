@@ -14,8 +14,21 @@ header {
 
 .header-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.header-content h1 {
+  margin: 0;
+}
+
+.search-bar {
+  margin-left: auto; /* Ajout de cette ligne */
 }
 
 .search-bar {
