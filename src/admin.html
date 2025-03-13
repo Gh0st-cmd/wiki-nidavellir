@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Nidavellir</title>
+  <link rel="stylesheet" href="admin.css">
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Panneau d'administration</h1>
+    
+    <div class="login-form" id="loginForm">
+      <h2>Connexion</h2>
+      <input type="text" id="username" placeholder="Nom d'utilisateur" aria-label="Nom d'utilisateur">
+      <input type="password" id="password" placeholder="Mot de passe" aria-label="Mot de passe">
+      <button onclick="login()">Se connecter</button>
+      <p id="loginError" class="error-message"></p>
+    </div>
+
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+      <div class="admin-sidebar">
+        <h3>Menu Admin</h3>
+        <ul>
+          <li><a href="#articles" class="active">Gestion des articles</a></li>
+          <li><a href="#statistics">Statistiques</a></li>
+          <li><a href="#users">Gestion des utilisateurs</a></li>
+          <li><a href="#settings">Paramètres</a></li>
+        </ul>
+      </div>
+
+      <div class="admin-content">
+        <div class="statistics-grid">
+          <div class="stat-card">
+            <h4>Visiteurs</h4>
+            <p id="visitorsCount">0</p>
+            <div class="stat-progress"></div>
+          </div>
+          <div class="stat-card">
+            <h4>Articles</h4>
+            <p id="articlesCount">0</p>
+            <div class="stat-progress"></div>
+          </div>
+          <div class="stat-card">
+            <h4>Utilisateurs</h4>
+            <p id="usersCount">0</p>
+            <div class="stat-progress"></div>
+          </div>
+        </div>
+
+        <div class="article-management">
+          <h2>Gestion des articles</h2>
+          <div class="article-list" id="articleList"></div>
+          <button onclick="createNewArticle()" class="new-article-btn">+ Nouvel article</button>
+        </div>
+
+        <div class="user-management hidden" id="userManagement">
+          <h2>Gestion des utilisateurs</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="userList"></tbody>
+          </table>
+        </div>
+
+        <div class="settings hidden" id="settingsPanel">
+          <h2>Paramètres du site</h2>
+          <form id="siteSettings">
+            <div class="form-group">
+              <label for="siteTitle">Titre du site</label>
+              <input type="text" id="siteTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="siteDescription">Description</label>
+              <textarea id="siteDescription"></textarea>
+            </div>
+            <button type="submit">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../../Downloads/admin.js"></script>
+</body>
+</html>
