@@ -3,49 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nidavellir - Wiki</title>
+    <title>Nidavellir</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <!-- Titre avec l'effet de lévitation et de flamme -->
-        <h1 id="titreNidavellir">Nidavellir</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#reglement">Règlement</a></li>
-                <li><a href="#plugins">Plugins</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="admin.html" class="admin-link">Admin</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Nidavellir</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+                <button>Ctrl+K</button>
+            </div>
+        </div>
     </header>
-    
-    <!-- Sections du site -->
-    <section id="home">
-        <h2>À propos du serveur</h2>
-        <p>Nidavellir est un serveur Minecraft basé sur des plugins offrant une expérience unique.</p>
-    </section>
-    
-    <section id="reglement">
-        <h2>Règlement</h2>
-        <p>Respectez les règles pour une bonne ambiance.</p>
-    </section>
-    
-    <section id="plugins">
-        <h2>Plugins</h2>
-        <p>Liste des plugins utilisés sur le serveur.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Rejoignez-nous sur Discord pour en savoir plus.</p>
-    </section>
 
-    <!-- Pied de page -->
-    <footer>
-        <p>&copy; 2025 Nidavellir - Tous droits réservés.</p>
-    </footer>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" data-category="about">À propos de Nidavellir</a></li>
+                    <li>
+                        <a href="#">GAMEPLAY</a>
+                        <ul class="submenu">
+                            <li><a href="#" data-category="gameplay-debut">Bien débuter</a></li>
+                            <li><a href="#" data-category="gameplay-capital">Informations capitales</a></li>
+                            <li><a href="#" data-category="gameplay-premiers-pas">Premiers pas sur Paladium</a></li>
+                            <li><a href="#" data-category="gameplay-approfondir">Approfondir son expérience</a></li>
+                            <li><a href="#" data-category="gameplay-boutique">La Boutique de Paladium</a></li>
+                            <li><a href="#" data-category="gameplay-biomes">Biomes et structures</a></li>
+                            <li><a href="#" data-category="gameplay-mods">Les mods de Paladium</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" data-category="rules">Règlement</a></li>
+                    <li><a href="#" data-category="plugins">Plugins</a></li>
+                    <li><a href="#" data-category="contact">Contact</a></li>
+                    <li><a href="../admin/admin.html" class="admin-button">Admin</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="about" class="category-content active">
+                <h2>À propos de Nidavellir</h2>
+                <p>Nidavellir est un serveur Minecraft basé sur des plugins offrant une expérience unique.</p>
+                <ul>
+                    <li>➤ Détails sur le serveur Nidavellir...</li>
+                    <li>➤ Plus d'informations ici...</li>
+                    <li>➤ Et encore plus là...</li>
+                </ul>
+            </section>
+
+            <section id="gameplay-debut" class="category-content">
+                <h2>Bien débuter</h2>
+                <p>Informations pour bien débuter sur le serveur.</p>
+            </section>
+
+            <section id="gameplay-capital" class="category-content">
+                <h2>Informations capitales</h2>
+                <p>Informations importantes à connaître.</p>
+            </section>
+
+            <section id="gameplay-premiers-pas" class="category-content">
+                <h2>Premiers pas sur Paladium</h2>
+                <p>Guide pour les premiers pas sur Paladium.</p>
+            </section>
+
+            <section id="gameplay-approfondir" class="category-content">
+                <h2>Approfondir son expérience</h2>
+                <p>Conseils pour améliorer votre expérience de jeu.</p>
+            </section>
+
+            <section id="gameplay-boutique" class="category-content">
+                <h2>La Boutique de Paladium</h2>
+                <p>Informations sur la boutique du serveur.</p>
+            </section>
+
+            <section id="gameplay-biomes" class="category-content">
+                <h2>Biomes et structures</h2>
+                <p>Présentation des biomes et structures du serveur.</p>
+            </section>
+
+            <section id="gameplay-mods" class="category-content">
+                <h2>Les mods de Paladium</h2>
+                <p>Liste des mods utilisés sur le serveur.</p>
+            </section>
+
+            <section id="rules" class="category-content">
+                <h2>Règlement</h2>
+                <p>Respectez les règles pour une bonne ambiance.</p>
+                <ul>
+                    <li>➤ Règle 1</li>
+                    <li>➤ Règle 2</li>
+                    <li>➤ Règle 3</li>
+                </ul>
+            </section>
+
+            <section id="plugins" class="category-content">
+                <h2>Plugins</h2>
+                <p>Liste des plugins utilisés sur le serveur.</p>
+            </section>
+
+            <section id="contact" class="category-content">
+                <h2>Contact</h2>
+                <p>Informations de contact pour l'équipe du serveur.</p>
+            </section>
+
+            <section id="admin" class="category-content">
+                <h2>Admin</h2>
+                <p>Informations réservées aux administrateurs.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

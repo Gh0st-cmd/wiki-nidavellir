@@ -1,223 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'MedievalSharp', cursive;
-  line-height: 1.6;
-  background: #2c1a0f;
-  color: #f4e4c1;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-size: 14px;
 }
 
-/* En-tête */
 header {
-  background: #3e1f11;
-  padding: 20px;
-  border-bottom: 3px solid #b8860b;
-  position: relative;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
 }
 
-#titreNidavellir {
-  font-size: 3rem;
-  text-align: center;
-  color: #b8860b;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-nav ul {
+.header-content {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 15px;
-}
-
-nav a {
-  color: #f4e4c1;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: #b8860b;
-  color: #3e1f11;
-}
-
-/* Sections principales */
-section {
-  padding: 40px 20px;
-  margin: 20px;
-  background: rgba(62, 31, 17, 0.8);
-  border: 2px solid #b8860b;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-section h2 {
-  color: #b8860b;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* Barre de recherche */
-.search-bar {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 200px;
-  padding: 10px;
-  border: 2px solid #b8860b;
-  border-radius: 20px;
-  background: #3e1f11;
-  color: #f4e4c1;
-  font-family: 'MedievalSharp', cursive;
-  transition: all 0.3s ease;
-}
-
-.search-bar:focus {
-  width: 300px;
-  outline: none;
-  border-color: #f4e4c1;
-}
-
-/* Boutons */
-.edit-btn, .save-btn {
-  background: #b8860b;
-  color: #3e1f11;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-  font-family: 'MedievalSharp', cursive;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.edit-btn:hover, .save-btn:hover {
-  background: #f4e4c1;
-  color: #3e1f11;
-  transform: scale(1.05);
-}
-
-.edit-btn {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Zone de texte */
-textarea {
-  width: 100%;
-  min-height: 150px;
-  background: #3e1f11;
-  color: #f4e4c1;
-  border: 2px solid #b8860b;
-  padding: 10px;
-  font-family: 'MedievalSharp', cursive;
-  margin-top: 10px;
-  border-radius: 5px;
-  resize: vertical;
-}
-
-/* Pied de page */
-footer {
-  margin-top: auto;
-  background: #3e1f11;
-  padding: 20px;
-  text-align: center;
-  border-top: 3px solid #b8860b;
-}
-
-/* Animation de chargement */
-.loading-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #3e1f11;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.loading-animation::before {
-  content: '';
-  width: 50px;
-  height: 50px;
-  border: 5px solid #b8860b;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.search-bar {
+  display: flex;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  header {
-    padding-bottom: 100px;
-  }
-  
-  .search-bar {
-    position: static;
-    width: 100%;
-    margin: 10px 0;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  section {
-    margin: 10px;
-    padding: 20px;
-  }
-  
-  #titreNidavellir {
-    font-size: 2rem;
-  }
+.search-bar button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2a2a2a;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #333;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.category-content {
+  background-color: #222222;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+.category-content.active {
+  display: block;
+}
+
+.category-content h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.category-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category-content li::before {
+  content: "➤ ";
+  color: #999999;
+}
+
+.category-content li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles pour le menu déroulant GAMEPLAY */
+.sidebar nav ul li .submenu {
+  display: none;
+  background-color: #333;
+  padding-left: 20px;
+}
+
+.sidebar nav ul li:hover .submenu {
+  display: block;
+}
+
+.sidebar nav ul li .submenu li a {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar nav ul li .submenu li a::before {
+  content: "➤ ";
+  color: #00a0e9;
+  margin-right: 5px;
+}
+
+.sidebar nav ul li .submenu li a[data-category="gameplay-debut"]::after {
+  content: " >";
+  color: #999;
+  margin-left: auto;
 }
